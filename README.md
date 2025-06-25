@@ -33,8 +33,7 @@ SkillCraft-Landing-Page/
 ├── index.html
 ├── style.css
 ├── script.js
-└── assets/
-└── images/
+└── scwp.avif
 
 ````
 
