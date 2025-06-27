@@ -87,21 +87,8 @@ header.scrolled {
   flex-direction: column;
   padding-top: 8rem;
 }
-.circle{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin: 50px auto;
-  max-width: 75%;
-}
 .content-wrapper {
   display: inline-block;
-}
-@keyframes spinOnce {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(360deg); }
 }
 .content1{
   background: linear-gradient(to right, #0c59bf, #152437);
@@ -109,19 +96,15 @@ header.scrolled {
   color: white;
   padding: 1.875rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 1s ease ;
+  transition: box-shadow 1s ease ;
   text-align: center;
   display: flex;
-  opacity:0.8;
+  opacity:0.7;
   flex-direction: column;
   justify-content: center;
   line-height: 1.5;
   word-wrap: break-word;
   backface-visibility: hidden;
-  transform-style: preserve-3d;
-  transform: rotateY(0deg); 
-  transform-origin: center center;
-}
 
 .content1:hover{
   color: black;
