@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -97,29 +96,39 @@ header.scrolled {
   margin: 50px auto;
   max-width: 95%;
 }
+.content-wrapper {
+  display: inline-block;
+}
+@keyframes spinOnce {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
 .content1{
   background: linear-gradient(to right, #0c59bf, #152437);
   border-radius: 3rem;
   color: white;
   padding: 1.875rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  opacity: 1;
-  transition: box-shadow 1s ease;
-  overflow-y: auto;
-  overflow-x: hidden;
+  transition: transform 1s ease ;
   text-align: center;
   display: flex;
+  opacity:0.85;
   flex-direction: column;
   justify-content: center;
   line-height: 1.5;
   word-wrap: break-word;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg); 
+  transform-origin: center center;
+}
+.content1.spin-once {
+  animation: spinOnce 2s ease ;
 }
 .content1:hover{
   color: black;
   background: linear-gradient(to right, #c9d1db, #315f9c);
   box-shadow: 0 6px 24px black;
-  transform: translateY(-5px) scale(0.1);
-  animation: spin360 5s ease forwards;
   opacity: 1;
 }
 .hero-content h1 {
@@ -127,10 +136,7 @@ header.scrolled {
   color: #1E3A8A;
   margin-bottom: 1rem;
 }
-@keyframes spin360 {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(360deg); }
-}
+
 .hero-content p {
   font-size: 1.125rem;
   color: black;
